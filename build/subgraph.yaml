@@ -2,13 +2,13 @@ specVersion: 0.0.2
 description: DAOCreator
 repository: https://github.com/graphprotocol/example-subgraph
 schema:
-  file: ./schema.graphql
+  file: schema.graphql
 dataSources:
   - kind: ethereum/contract
     name: MolochSummoner
     network: ropsten
     source:
-      address: '0xc99181d13EAC0CFd7AA45E87aa6DccB610E14650'
+      address: "0xc99181d13EAC0CFd7AA45E87aa6DccB610E14650"
       abi: MolochSummoner
     mapping:
       kind: ethereum/events
@@ -18,8 +18,9 @@ dataSources:
         - Dao
       abis:
         - name: MolochSummoner
-          file: ./abis/MolochSummoner.json
+          file: MolochSummoner\abis\MolochSummoner.json
       eventHandlers:
-        - event: SummonComplete(indexed address,address[],address[],uint256,uint256,uint256,uint256,uint256,uint256,uint256,uint256[])
+        - event: SummonComplete(indexed
+            address,address[],address[],uint256,uint256,uint256,uint256,uint256,uint256,uint256,uint256[])
           handler: handleNewDAO
-      file: ./src/mapping.ts
+      file: MolochSummoner\MolochSummoner.wasm
