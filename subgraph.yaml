@@ -1,6 +1,6 @@
 specVersion: 0.0.2
 description: DAOCreator
-repository: https://github.com/graphprotocol/example-subgraph
+repository: https://github.com/muellllkreis/dao-subgraph
 schema:
   file: ./schema.graphql
 dataSources:
@@ -8,7 +8,8 @@ dataSources:
     name: MolochSummoner
     network: ropsten
     source:
-      address: '0xc99181d13EAC0CFd7AA45E87aa6DccB610E14650'
+      #address: '0xc99181d13EAC0CFd7AA45E87aa6DccB610E14650'
+      address: '0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512'
       abi: MolochSummoner
     mapping:
       kind: ethereum/events
